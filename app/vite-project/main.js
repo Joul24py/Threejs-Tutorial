@@ -48,6 +48,15 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
+const joulTexture = new THREE.TextureLoader().load('joul.jpg');
+
+const joul = new THREE.Mesh(
+    new THREE.BoxGeometry(3, 3, 3),
+    new THREE.MeshBasicMaterial({ map: joulTexture })
+);
+
+scene.add(joul);
+
 function animate(){
     requestAnimationFrame(animate);
 
